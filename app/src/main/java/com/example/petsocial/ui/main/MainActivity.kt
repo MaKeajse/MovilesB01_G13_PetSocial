@@ -13,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.MaterialToolbar
 import java.io.InputStream
+import com.example.petsocial.ui.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     )
 
     private val items = listOf(
-        MenuItemM("Perfil", "icons/perfil.png", "👤") { Placeholder("Perfil (placeholder)") },
+        MenuItemM("Perfil", "icons/perfil.png", "👤") { ProfileFragment()  },
         MenuItemM("Fotos",  "icons/fotos.png",  "🖼️") { Placeholder("Fotos (placeholder)") },
         MenuItemM("Videos", "icons/videos.png", "▶️") { Placeholder("Videos (placeholder)") },
         MenuItemM("Web",    "icons/web.png",    "🌐") { Placeholder("Web (placeholder)") },

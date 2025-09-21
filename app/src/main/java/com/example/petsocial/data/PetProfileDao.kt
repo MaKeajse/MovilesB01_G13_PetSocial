@@ -1,15 +1,17 @@
 package com.example.petsocial.data
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface PetProfileDao {
     @Query("SELECT * FROM pet_profile WHERE id = 1")
-    suspend fun getOne(): PetProfileEntity?
+    suspend fun getOnce(): PetProfileEntity?
+
+    @Query("SELECT * FROM pet_profile WHERE id = 1")
+    fun watch(): Flow<PetProfileEntity?>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(p: PetProfileEntity)
+    suspend fun upsert(profile: PetProfileEntity)
 }
+
