@@ -50,7 +50,7 @@ class ProfileFragment : Fragment() {
     private val FIELD_BG    = Color.parseColor("#F2F2F6")
 
     // ---------- Placeholder en assets (silueta "huella") ----------
-    private val PET_PLACEHOLDER = "placeholders/huella.png"
+    private val PET_PLACEHOLDER = "icons/huella.png"
 
     // Selector de imagen con permiso persistente
     private val pickImage = registerForActivityResult(OpenDocument()) { uri: Uri? ->

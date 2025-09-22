@@ -243,12 +243,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         // (Opcional) Arrancar fijado:
-        drawer.openDrawer(GravityCompat.START)
+        /*drawer.openDrawer(GravityCompat.START)
         drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN, GravityCompat.START)
         (contentFrame.layoutParams as LinearLayout.LayoutParams).apply {
         marginStart = contentShiftPx
         contentFrame.layoutParams = this
-         }
+         }*/
     }
 
 
